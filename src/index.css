@@ -1,0 +1,11 @@
+@import "/src/styles/variables.css";
+
+body {
+  background-color: var(--bodyBgColor);
+  font-family: var(--fontFamily);
+  color: var(--textColor);
+  margin: 0;
+  padding: 0;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
