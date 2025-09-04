@@ -2,5 +2,18 @@
   position: sticky;
   top: 0;
   background-color: var(--headerBgColor);
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 1rem;
+  gap: 2rem;
+
+  .searchBar {
+    flex-basis: 60%;
+  }
+
+  .navContainer {
+    margin-left: auto;
+  }
 }
