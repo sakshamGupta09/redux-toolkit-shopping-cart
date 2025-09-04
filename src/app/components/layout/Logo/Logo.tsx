@@ -5,15 +5,19 @@ export default function Logo() {
     <picture title="Shopping App Logo">
       <source
         type="image/avif"
-        media="(min-width:780px)"
-        srcSet="logos/logo-lg.avif"
+        media="(width > 800px)"
+        srcSet="https://www.ugaoo.com/cdn/shop/files/logo.png?height=100&v=1738571809"
       />
       <source
-        media="(max-width:465px)"
-        srcSet="logos/logo-sm.avif"
         type="image/avif"
+        media="(width <= 800px)"
+        srcSet="https://www.ugaoo.com/cdn/shop/files/logo.png?height=80&v=1738571809"
       />
-      <img src="logos/logo-sm.avif" alt="Logo" className={styles.logo} />
+      <img
+        src="https://www.ugaoo.com/cdn/shop/files/logo.png?height=80&v=1738571809"
+        alt="Logo"
+        className={styles.logo}
+      />
     </picture>
   );
 }
