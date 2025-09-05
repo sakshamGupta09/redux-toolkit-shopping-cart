@@ -8,22 +8,13 @@
   padding: 1rem;
   gap: 2.5rem;
   justify-content: center;
-
-  .searchBar {
-    flex-basis: 50%;
-  }
 }
 
-@media (width <= 770px) {
+@media (width <= var(--screen-md)) {
   .header {
     padding: 12px;
     justify-content: space-between;
     gap: 1rem 1.5rem;
-
-    .searchBar {
-      order: 2;
-      flex-basis: 100%;
-    }
 
     .menuItemText {
       display: none;
