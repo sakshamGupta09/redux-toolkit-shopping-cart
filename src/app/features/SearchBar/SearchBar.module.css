@@ -1,0 +1,31 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #dbdde8;
+  flex-basis: 50%;
+
+  label {
+    padding: 0.75rem;
+  }
+
+  input {
+    border: none;
+    outline: 0;
+    background-color: inherit;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1.25rem;
+    letter-spacing: 0.6px;
+    padding: 0.75rem;
+    padding-left: 0;
+    flex-grow: 1;
+  }
+}
+
+@media (width <= 768px) {
+  .searchContainer {
+    flex-basis: 100%;
+    order: 2;
+  }
+}

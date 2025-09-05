@@ -10,7 +10,7 @@
   justify-content: center;
 }
 
-@media (width <= var(--screen-md)) {
+@media (width <= 768px) {
   .header {
     padding: 12px;
     justify-content: space-between;

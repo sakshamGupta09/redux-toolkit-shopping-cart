@@ -3,7 +3,7 @@
   height: auto;
   max-height: 50px;
 
-  @media (width < var(--screen-md)) {
+  @media (width <= 768) {
     max-height: 40px;
   }
 }
