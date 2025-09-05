@@ -36,10 +36,10 @@ export const Routes: RouteObject[] = [
         },
       },
       {
-        path: "checkout",
+        path: "cart",
         lazy: async () => {
-          const CheckoutComponent = await import("../pages/Checkout/Checkout");
-          return { Component: CheckoutComponent.default };
+          const CartComponent = await import("../pages/Cart/Cart");
+          return { Component: CartComponent.default };
         },
       },
       {

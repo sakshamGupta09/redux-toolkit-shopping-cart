@@ -1,5 +1,6 @@
 @import "/src/styles/variables.css";
 @import "/src/styles/utils.css";
+@import "/src/styles/buttons.css";
 
 body {
   background-color: var(--bodyBgColor);
