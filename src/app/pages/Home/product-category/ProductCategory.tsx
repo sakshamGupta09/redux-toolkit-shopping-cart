@@ -6,21 +6,18 @@ interface Props {
 }
 
 export default function ProductCategory({ category }: Props) {
-  const image = {
-    sm: `${category.img}?q=60`,
-    lg: `${category.img}?q=100`,
-  };
-
   return (
     <div className={styles.category}>
       <div className={styles.imgContainer}>
-        <picture title={category.name}>
-          <source media="(width < 800px)" srcSet={image.sm} />
-          <source media="(width >= 800px)" srcSet={image.lg} />
-          <img src={image.lg} alt={category.name} className={styles.img} />
-        </picture>
+        <img
+          className={styles.img}
+          src={`${category.img}?q=100`}
+          width="128"
+          height="128"
+          alt={category.name}
+        />
       </div>
-      <p className={styles.text}>{category.name}</p>
+      <p>{category.name}</p>
     </div>
   );
 }

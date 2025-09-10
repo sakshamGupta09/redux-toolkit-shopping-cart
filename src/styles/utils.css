@@ -25,3 +25,7 @@
 .text-primary {
   color: var(--textColor);
 }
+
+.mb-sm {
+  margin-bottom: 0.65rem;
+}

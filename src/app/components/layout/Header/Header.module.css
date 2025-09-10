@@ -8,6 +8,7 @@
   padding: 1rem;
   gap: 2.5rem;
   justify-content: center;
+  border-bottom: 1px solid #dbdde8;
 }
 
 @media (width <= 768px) {
