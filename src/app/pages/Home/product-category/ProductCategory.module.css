@@ -1,0 +1,21 @@
+.category {
+  padding: 0.5rem;
+  background-color: #fff;
+
+  .imgContainer {
+    width: 128px;
+    height: 128px;
+    margin-bottom: 0.5rem;
+  }
+
+  .img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+
+  .text {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
