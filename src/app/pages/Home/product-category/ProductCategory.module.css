@@ -1,6 +1,7 @@
 .category {
   padding: 0.5rem;
   background-color: #fff;
+  border-radius: 8px;
 
   .imgContainer {
     width: 128px;

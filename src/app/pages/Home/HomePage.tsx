@@ -13,5 +13,9 @@ export default function HomePage() {
     },
   ].map((el) => <ProductCategory key={el.name} category={el} />);
 
-  return <section className={styles.categories}>{categoriesList}</section>;
+  return (
+    <div>
+      <section className={styles.categories}>{categoriesList}</section>
+    </div>
+  );
 }
