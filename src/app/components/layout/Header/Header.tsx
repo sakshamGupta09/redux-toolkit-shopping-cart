@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import Logo from "../Logo/Logo";
+import Logo from "./Logo/Logo";
 import styles from "./Header.module.css";
 import Badge from "../../ui/Badge/Badge";
-import SearchBar from "../../../features/SearchBar/SearchBar";
+import SearchBar from "./SearchBar/SearchBar";
 
 export default function Header() {
   return (
