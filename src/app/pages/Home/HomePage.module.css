@@ -1,9 +1,0 @@
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-  @media (width <= 600px) {
-    justify-content: space-evenly;
-  }
-}
