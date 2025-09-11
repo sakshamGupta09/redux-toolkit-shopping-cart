@@ -52,7 +52,9 @@ export const Routes: RouteObject[] = [
       {
         path: "register",
         lazy: async () => {
-          const RegisterComponent = await import("../pages/Register/Register");
+          const RegisterComponent = await import(
+            "../pages/Register/Register"
+          );
           return { Component: RegisterComponent.default };
         },
       },
