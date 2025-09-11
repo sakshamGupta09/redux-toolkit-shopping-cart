@@ -5,7 +5,7 @@ export const Routes: RouteObject[] = [
     path: "/",
     lazy: async () => {
       const layoutComponent = await import(
-        "../components/layout/AppLayout/AppLayout"
+        "@/components/layout/AppLayout/AppLayout"
       );
       return { Component: layoutComponent.default };
     },
@@ -13,7 +13,7 @@ export const Routes: RouteObject[] = [
       {
         index: true,
         lazy: async () => {
-          const HomePageComponent = await import("../pages/Home/HomePage");
+          const HomePageComponent = await import("@/pages/Home/HomePage");
           return { Component: HomePageComponent.default };
         },
       },
@@ -21,7 +21,7 @@ export const Routes: RouteObject[] = [
         path: "products",
         lazy: async () => {
           const ProductsComponent = await import(
-            "../pages/ProductListing/Products"
+            "@/pages/ProductListing/Products"
           );
           return { Component: ProductsComponent.default };
         },
@@ -30,7 +30,7 @@ export const Routes: RouteObject[] = [
         path: "products/:id",
         lazy: async () => {
           const ProductDetailsComponent = await import(
-            "../pages/ProductDetails/ProductDetails"
+            "@/pages/ProductDetails/ProductDetails"
           );
           return { Component: ProductDetailsComponent.default };
         },
@@ -38,14 +38,14 @@ export const Routes: RouteObject[] = [
       {
         path: "cart",
         lazy: async () => {
-          const CartComponent = await import("../pages/Cart/Cart");
+          const CartComponent = await import("@/pages/Cart/Cart");
           return { Component: CartComponent.default };
         },
       },
       {
         path: "login",
         lazy: async () => {
-          const LoginComponent = await import("../pages/Login/Login");
+          const LoginComponent = await import("@/pages/Login/Login");
           return { Component: LoginComponent.default };
         },
       },
@@ -53,7 +53,7 @@ export const Routes: RouteObject[] = [
         path: "register",
         lazy: async () => {
           const RegisterComponent = await import(
-            "../pages/Register/Register"
+            "@/pages/Register/Register"
           );
           return { Component: RegisterComponent.default };
         },
@@ -64,7 +64,7 @@ export const Routes: RouteObject[] = [
     path: "*",
     lazy: async () => {
       const PageNotFoundComponent = await import(
-        "../components/ui/PageNotFound/PageNotFound"
+        "@/components/ui/PageNotFound/PageNotFound"
       );
       return { Component: PageNotFoundComponent.default };
     },
