@@ -27,6 +27,7 @@ export async function http<T>(
   }
 
   let data;
+
   try {
     const response = await window.fetch(`${API_URL} ${endpoint}`, config);
     data = await response.json();

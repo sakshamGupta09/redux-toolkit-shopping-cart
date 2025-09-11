@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { RequestState } from "../../models/requestStatus";
 import type { IProductCategory } from "./models/ProductCategory";
+import { createAppAsyncThunk } from "@/app/withTypes";
+import type { RootState } from "@/app/store";
+import { http } from "@/api/client";
 
 const sliceName = "categories";
 
@@ -12,15 +15,44 @@ const initialState: CategoriesState = {
   data: [],
 };
 
+const fetchCategories = createAppAsyncThunk(
+  "categories/fetchCategories",
+  async () => {
+    const response = await http.get<IProductCategory[]>("products/categories");
+    return response.data;
+  },
+  {
+    condition(_unused, thunkApi) {
+      const requestStatus = selectCategoriesState(thunkApi.getState()).status;
+      if (requestStatus !== "idle") {
+        return false;
+      }
+    },
+  }
+);
+
 const categoriesSlice = createSlice({
   name: sliceName,
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    
+    builder
+      .addCase(fetchCategories.pending, () => {
+        return { status: "progress", data: [], error: null };
+      })
+      .addCase(fetchCategories.fulfilled, (_unused, action) => {
+        return { status: "success", data: action.payload, error: null };
+      })
+      .addCase(fetchCategories.rejected, (_unused, action) => {
+        return {
+          status: "failed",
+          data: [],
+          error: action.error.message ?? "Unknown Error",
+        };
+      });
   },
 });
 
-export default categoriesSlice.reducer;
+export const selectCategoriesState = (state: RootState) => state.categories;
 
-export const {} = categoriesSlice.actions;
+export default categoriesSlice.reducer;
