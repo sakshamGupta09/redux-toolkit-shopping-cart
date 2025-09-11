@@ -1,4 +1,4 @@
-import type { IProductCategory } from "../models/ProductCategory";
+import type { IProductCategory } from "../../models/ProductCategory";
 import styles from "./ProductCategory.module.css";
 
 interface Props {
