@@ -4,7 +4,7 @@ import {
   type ThunkAction,
 } from "@reduxjs/toolkit";
 
-import categoriesReducer from "@/features/categories/slice";
+import categoriesReducer from "@features/categories/slice";
 
 export const store = configureStore({
   reducer: {

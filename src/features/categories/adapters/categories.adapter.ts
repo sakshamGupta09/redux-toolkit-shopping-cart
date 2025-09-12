@@ -1,11 +1,6 @@
 import { CATEGORIES } from "../constants/categories";
-import type {
-  ICategoriesResponse,
-  IProductCategory,
-} from "../models/ProductCategory";
+import type { IProductCategory } from "../models/ProductCategory";
 
-export function adaptCategories(
-  response: ICategoriesResponse[]
-): IProductCategory[] {
+export function adaptCategories(): IProductCategory[] {
   return CATEGORIES;
 }

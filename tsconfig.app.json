@@ -24,7 +24,14 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": "src",
     "paths": {
-      "@/*": ["src/*"]
+      "@components/*": ["components/*"],
+      "@features/*": ["features/*"],
+      "@pages/*": ["pages/*"],
+      "@routes/*": ["routes/*"],
+      "@constants/*": ["constants/*"],
+      "@models/*": ["models/*"],
+      "@api/*": ["api/*"],
+      "@app/*": ["app/*"]
     }
   },
   "include": ["src"]

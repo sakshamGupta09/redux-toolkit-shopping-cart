@@ -1,4 +1,4 @@
-import { API_DELAY_BY } from "@/constants/api-delay";
+import { API_DELAY_BY } from "@constants/api-delay.ts";
 
 interface HttpResponse<T> {
   status: number;

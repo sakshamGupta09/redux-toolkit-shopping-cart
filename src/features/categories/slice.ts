@@ -4,9 +4,9 @@ import type {
   ICategoriesResponse,
   IProductCategory,
 } from "./models/ProductCategory";
-import { createAppAsyncThunk } from "@/app/withTypes";
-import type { RootState } from "@/app/store";
-import { http } from "@/api/client";
+import { createAppAsyncThunk } from "@app/withTypes";
+import type { RootState } from "@app/store";
+import { http } from "@api/client";
 import { adaptCategories } from "./adapters/categories.adapter";
 
 const sliceName = "categories";
@@ -28,7 +28,7 @@ export const fetchCategories = createAppAsyncThunk(
     return response.data;
   },
   {
-    condition(_unused, thunkApi) {
+    condition(_: void, thunkApi) {
       const requestStatus = selectCategoriesState(thunkApi.getState()).status;
       if (requestStatus !== "idle") {
         return false;
@@ -46,10 +46,10 @@ const categoriesSlice = createSlice({
       .addCase(fetchCategories.pending, () => {
         return { status: "progress", data: [], error: null };
       })
-      .addCase(fetchCategories.fulfilled, (_unused, action) => {
+      .addCase(fetchCategories.fulfilled, () => {
         return {
           status: "success",
-          data: adaptCategories(action.payload),
+          data: adaptCategories(),
           error: null,
         };
       })

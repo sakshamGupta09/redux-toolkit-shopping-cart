@@ -1,8 +1,9 @@
-import { useAppDispatch, useAppSelector } from "@/app/hooks";
+import { useAppDispatch, useAppSelector } from "@app/hooks";
 import styles from "./ProductCategories.module.css";
 import { useEffect } from "react";
 import { fetchCategories, selectCategoriesState } from "../../slice";
 import ProductCategory from "../ProductCategory/ProductCategory";
+import type { IProductCategory } from "@features/categories/models/ProductCategory";
 
 export default function ProductCategories() {
   const dispatch = useAppDispatch();
@@ -14,7 +15,7 @@ export default function ProductCategories() {
     }
   }, [categoriesState, dispatch]);
 
-  const categoryItems = categoriesState.data.map((el) => (
+  const categoryItems = categoriesState.data.map((el: IProductCategory) => (
     <ProductCategory key={el.id} category={el} />
   ));
 
