@@ -1,1 +1,1 @@
-export const API_DELAY_BY = 3000;
+export const API_DELAY_BY = 0;

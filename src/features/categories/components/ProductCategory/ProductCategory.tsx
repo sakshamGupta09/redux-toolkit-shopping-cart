@@ -11,13 +11,14 @@ export default function ProductCategory({ category }: Props) {
       <div className={styles.imgContainer}>
         <img
           className={styles.img}
-          src={`${category.img}?q=100`}
+          src={category.img}
           width="128"
           height="128"
           alt={category.name}
+          loading="lazy"
         />
       </div>
-      <p>{category.name}</p>
+      <p className={styles.name}>{category.name}</p>
     </div>
   );
 }
