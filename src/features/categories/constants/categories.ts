@@ -29,11 +29,11 @@ export const CATEGORIES: IProductCategory[] = [
   {
     id: "fragrances",
     name: "Fragrances",
-    img: "https://rukminim2.flixcart.com/image/128/128/xif0q/perfume/j/o/d/100-mens-raw-eau-de-parfum-skinn-by-titan-men-original-imah8pug6hzajbgv.jpeg?q=100",
+    img: "https://rukminim2.flixcart.com/image/128/128/xif0q/perfume/i/p/1/200-godfather-perfume-combo-for-men-eau-de-parfum-beardo-men-original-imahecd3xghpp5ed.jpeg?q=100",
   },
   {
     id: "home-decoration",
     name: "Home decorations",
-    img: "https://rukminim2.flixcart.com/image/128/128/xif0q/showpiece-figurine/v/m/z/3-10-gold-gb-122-triptimultihub-10-original-imah9ppxzpzhtjft.jpeg?q=100",
+    img: "https://rukminim2.flixcart.com/fk-p-flap/128/128/image/433b0f4740e83c8e.jpg?q=100",
   },
 ];
