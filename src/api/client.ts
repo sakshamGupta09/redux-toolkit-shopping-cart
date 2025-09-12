@@ -1,3 +1,5 @@
+import { API_DELAY_BY } from "@/constants/api-delay";
+
 interface HttpResponse<T> {
   status: number;
   data: T;
@@ -29,7 +31,10 @@ export async function http<T>(
   let data;
 
   try {
-    const response = await window.fetch(`${API_URL} ${endpoint}`, config);
+    const response = await window.fetch(
+      `${API_URL}${endpoint}?delay=${API_DELAY_BY}`,
+      config
+    );
     data = await response.json();
     if (response.ok) {
       return {

@@ -1,17 +1,17 @@
-import ProductCategory from "../ProductCategory/ProductCategory";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import styles from "./ProductCategories.module.css";
+import { useEffect } from "react";
+import { fetchCategories, selectCategoriesState } from "../../slice";
 
 export default function ProductCategories() {
-  const categoriesList = [
-    {
-      name: "Beauty",
-      img: "https://rukminim2.flixcart.com/fk-p-flap/128/128/image/5f2ee7f883cdb774.png",
-    },
-    {
-      name: "Fashion",
-      img: "https://rukminim2.flixcart.com/fk-p-flap/128/128/image/ff559cb9d803d424.png",
-    },
-  ].map((el) => <ProductCategory key={el.name} category={el} />);
+  const dispatch = useAppDispatch();
+  const categoriesState = useAppSelector(selectCategoriesState);
 
-  return <section className={styles.categories}>{categoriesList}</section>;
+  useEffect(() => {
+    if (categoriesState.status === "idle") {
+      dispatch(fetchCategories());
+    }
+  }, [categoriesState, dispatch]);
+
+  return <section className={styles.categories}></section>;
 }

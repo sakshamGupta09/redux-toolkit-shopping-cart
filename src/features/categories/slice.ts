@@ -15,7 +15,7 @@ const initialState: CategoriesState = {
   data: [],
 };
 
-const fetchCategories = createAppAsyncThunk(
+export const fetchCategories = createAppAsyncThunk(
   "categories/fetchCategories",
   async () => {
     const response = await http.get<IProductCategory[]>("products/categories");
