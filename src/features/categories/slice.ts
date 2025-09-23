@@ -8,7 +8,7 @@ import { createAppAsyncThunk } from "@app/withTypes";
 import type { RootState } from "@app/store";
 import { http } from "@api/client";
 import { adaptCategories } from "./adapters/categories.adapter";
-import { CATEGORIES } from "./constants/categories";
+import { CATEGORIES } from "./mocks/categories";
 
 const sliceName = "categories";
 
