@@ -6,4 +6,5 @@ export interface SkeletonProps {
   borderRadius?: string;
   children: ReactElement;
   loading: boolean;
+  animated?: boolean;
 }

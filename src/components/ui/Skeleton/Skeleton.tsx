@@ -1,4 +1,5 @@
 import type { SkeletonProps } from "./models/Skeleton";
+import styles from "./Skeleton.module.css";
 
 export default function Skeleton({
   width = "100%",
@@ -6,6 +7,7 @@ export default function Skeleton({
   borderRadius = "0",
   loading = false,
   children,
+  animated = true,
 }: SkeletonProps) {
   if (!loading) {
     return children;
@@ -15,7 +17,12 @@ export default function Skeleton({
     width,
     height,
     borderRadius,
-    backgroundColor: "var(--skeleton-bg)",
   };
-  return <div style={style} aria-hidden="true" />;
+
+  let skeletonClass = styles.skeleton;
+  if (animated) {
+    skeletonClass += " " + styles.animated;
+  }
+
+  return <div className={skeletonClass} style={style} aria-hidden="true" />;
 }

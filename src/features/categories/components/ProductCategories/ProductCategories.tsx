@@ -9,6 +9,8 @@ export default function ProductCategories() {
   const dispatch = useAppDispatch();
   const categoriesState = useAppSelector(selectCategoriesState);
 
+  const isLoading = categoriesState.status === "progress";
+
   useEffect(() => {
     if (categoriesState.status === "idle") {
       dispatch(fetchCategories());
@@ -16,13 +18,15 @@ export default function ProductCategories() {
   }, [categoriesState, dispatch]);
 
   const categoryItems = categoriesState.data.map((el: IProductCategory) => (
-    <ProductCategory key={el.id} category={el} />
+    <ProductCategory key={el.id} category={el} loading={isLoading} />
   ));
 
   return (
     <>
       <h2 className="page-title">Shop by Category</h2>
-      <section className={styles.categories}>{categoryItems}</section>
+      <section className={styles.categories} aria-busy={isLoading}>
+        {categoryItems}
+      </section>
     </>
   );
 }

@@ -8,6 +8,7 @@ import { createAppAsyncThunk } from "@app/withTypes";
 import type { RootState } from "@app/store";
 import { http } from "@api/client";
 import { adaptCategories } from "./adapters/categories.adapter";
+import { CATEGORIES } from "./constants/categories";
 
 const sliceName = "categories";
 
@@ -16,7 +17,7 @@ export type CategoriesState = RequestState<IProductCategory[]>;
 const initialState: CategoriesState = {
   status: "idle",
   error: null,
-  data: [],
+  data: [...CATEGORIES],
 };
 
 export const fetchCategories = createAppAsyncThunk(
@@ -43,8 +44,8 @@ const categoriesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCategories.pending, () => {
-        return { status: "progress", data: [], error: null };
+      .addCase(fetchCategories.pending, (state) => {
+        state.status = "progress";
       })
       .addCase(fetchCategories.fulfilled, () => {
         return {
