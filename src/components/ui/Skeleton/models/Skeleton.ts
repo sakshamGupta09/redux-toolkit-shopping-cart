@@ -7,4 +7,5 @@ export interface SkeletonProps {
   children: ReactElement;
   loading: boolean;
   animated?: boolean;
+  className?: string;
 }

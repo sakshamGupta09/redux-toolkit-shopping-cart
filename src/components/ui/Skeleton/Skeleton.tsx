@@ -8,6 +8,7 @@ export default function Skeleton({
   loading = false,
   children,
   animated = true,
+  className = "",
 }: SkeletonProps) {
   if (!loading) {
     return children;
@@ -19,7 +20,7 @@ export default function Skeleton({
     borderRadius,
   };
 
-  let skeletonClass = styles.skeleton;
+  let skeletonClass = `${styles.skeleton} ${className}`;
   if (animated) {
     skeletonClass += " " + styles.animated;
   }
