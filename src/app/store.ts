@@ -5,10 +5,12 @@ import {
 } from "@reduxjs/toolkit";
 
 import categoriesReducer from "@features/categories/slice";
+import productsReducer from "@features/products/productsSlice";
 
 export const store = configureStore({
   reducer: {
     categories: categoriesReducer,
+    products: productsReducer,
   },
 });
 

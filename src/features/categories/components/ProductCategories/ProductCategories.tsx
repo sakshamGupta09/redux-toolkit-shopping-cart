@@ -12,10 +12,8 @@ export default function ProductCategories() {
   const isLoading = categoriesState.status === "progress";
 
   useEffect(() => {
-    if (categoriesState.status === "idle") {
-      dispatch(fetchCategories());
-    }
-  }, [categoriesState, dispatch]);
+    dispatch(fetchCategories());
+  }, []);
 
   const categoryItems = categoriesState.data.map((el: IProductCategory) => (
     <ProductCategory key={el.id} category={el} loading={isLoading} />
