@@ -14,12 +14,12 @@ export default function Products() {
     dispatch(fetchProducts());
   }, []);
 
-  const productItems = requestState.data.products.map((product) => <Product />);
+  const productItems = requestState.data.products.map(() => <Product />);
 
   return (
-    <>
+    <section>
       <h2 className="page-title">Trending Products</h2>
-      <section></section>
-    </>
+      <ul>{productItems}</ul>
+    </section>
   );
 }

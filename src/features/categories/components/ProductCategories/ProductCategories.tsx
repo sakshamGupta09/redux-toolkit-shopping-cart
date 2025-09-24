@@ -20,11 +20,11 @@ export default function ProductCategories() {
   ));
 
   return (
-    <>
+    <section className={styles.categories}>
       <h2 className="page-title">Shop by Category</h2>
-      <section className={styles.categories} aria-busy={isLoading}>
+      <ul className={styles.categories__list} aria-busy={isLoading}>
         {categoryItems}
-      </section>
-    </>
+      </ul>
+    </section>
   );
 }

@@ -2,6 +2,7 @@
   background-color: var(--skeleton-bg);
   position: relative;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .animated::after {

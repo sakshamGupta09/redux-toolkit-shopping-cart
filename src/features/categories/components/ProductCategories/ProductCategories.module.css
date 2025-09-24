@@ -1,9 +1,21 @@
 .categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  padding: 1rem;
+  background-color: #f5f0e6;
 
-  @media (width <= 600px) {
-    justify-content: space-evenly;
+  .categories__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+  }
+}
+
+@media (width <= 600px) {
+  .categories {
+    padding: 0.2rem 0.5rem;
+
+    .categories__list {
+      justify-content: space-evenly;
+    }
   }
 }
