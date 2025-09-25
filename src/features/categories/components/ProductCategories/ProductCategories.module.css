@@ -3,8 +3,8 @@
   background-color: #f5f0e6;
 
   .categories__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(144px, 1fr));
     gap: 1rem;
     list-style: none;
   }
@@ -12,10 +12,6 @@
 
 @media (width <= 600px) {
   .categories {
-    padding: 0.2rem 0.5rem;
-
-    .categories__list {
-      justify-content: space-evenly;
-    }
+    padding: 0.5rem;
   }
 }
