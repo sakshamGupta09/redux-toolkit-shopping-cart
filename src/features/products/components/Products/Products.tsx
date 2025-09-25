@@ -18,7 +18,7 @@ export default function Products() {
 
   return (
     <section>
-      <h2 className="page-title">Trending Products</h2>
+      <h2 className="page-title">Best Selling Products</h2>
       <ul>{productItems}</ul>
     </section>
   );
