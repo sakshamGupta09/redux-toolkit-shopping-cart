@@ -5,6 +5,7 @@ import {
 } from "@features/products/productsSlice";
 import { useEffect } from "react";
 import Product from "../Product/Product";
+import styles from "./Products.module.css";
 
 export default function Products() {
   const dispatch = useAppDispatch();
@@ -14,12 +15,14 @@ export default function Products() {
     dispatch(fetchProducts());
   }, []);
 
-  const productItems = requestState.data.products.map(() => <Product />);
+  const productItems = requestState.data.products.map((product) => (
+    <Product key={product.id} product={product} />
+  ));
 
   return (
-    <section>
+    <section className={styles.products}>
       <h2 className="page-title">Best Selling Products</h2>
-      <ul>{productItems}</ul>
+      <div className={styles.products__list}>{productItems}</div>
     </section>
   );
 }

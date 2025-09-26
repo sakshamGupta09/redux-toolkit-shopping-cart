@@ -31,7 +31,8 @@
       "@constants/*": ["constants/*"],
       "@models/*": ["models/*"],
       "@api/*": ["api/*"],
-      "@app/*": ["app/*"]
+      "@app/*": ["app/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": ["src"]

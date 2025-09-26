@@ -4,6 +4,7 @@ import type { RootState } from "@app/store";
 import { http } from "@api/client";
 import type { IProductsResponse } from "./models/products-response";
 import { createSlice } from "@reduxjs/toolkit";
+import { PRODUCTS } from "./mocks/products";
 
 const sliceName = "products";
 
@@ -12,7 +13,7 @@ export type ProductsState = RequestState<IProductsResponse>;
 const initialState: ProductsState = {
   status: "idle",
   error: null,
-  data: { products: [], total: 0 },
+  data: { products: PRODUCTS.slice(0, 11), total: 10 },
 };
 
 export const fetchProducts = createAppAsyncThunk(
@@ -41,9 +42,9 @@ export const productsSlice = createSlice({
       .addCase(fetchProducts.pending, (state) => {
         state.status = "progress";
       })
-      .addCase(fetchProducts.fulfilled, (state, action) => {
+      .addCase(fetchProducts.fulfilled, (state) => {
         state.status = "success";
-        state.data = action.payload;
+        state.data = { products: PRODUCTS.slice(0, 11), total: 10 };
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "failed";

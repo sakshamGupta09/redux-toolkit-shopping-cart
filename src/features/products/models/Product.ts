@@ -15,7 +15,6 @@ export interface IProduct {
   description: string;
   priceDetails: IProductPrice;
   ratingDetails: IProductRating;
-  ratedByCount: number;
   images: string[];
-  thumbnail: string;
+  category: string;
 }
