@@ -3,29 +3,6 @@ import type { IProduct } from "../models/Product";
 export const PRODUCTS: IProduct[] = [
   {
     id: 1,
-    category: "beauty",
-    title: "OZONE Illuminous Gold Facial Kit for Glowing Skin  (60 g)",
-    description:
-      "The Illuminous Gold Facial Kit is a luxurious 6 step facial routine designed to provide a spa-like facial experience in the comfort of your own home. Formulated with the purest form of ingredients. This power-packed facial kit comes with unique benefits like skin lightening & texture improvement. Using this increases elasticity and moisture retention in the skin while also imparting a Gold-like Glow to the Skin. The facial kit promotes even skin tone and provides a more youthful-looking complexion. It offers a comprehensive skincare experience, leaving your skin looking radiant, refreshed, and nourished.",
-    priceDetails: {
-      original: 275,
-      discountedPrice: 169,
-      discountPercentage: 38,
-    },
-    ratingDetails: {
-      rating: 4.1,
-      ratedByCount: 9360,
-    },
-    images: [
-      "xif0q/facial-kit/z/v/2/60-illuminous-gold-facial-kit-for-glowing-skin-1-ozone-original-imah3xughcjp2a8h.jpeg",
-      "xif0q/facial-kit/u/k/t/60-illuminous-gold-facial-kit-for-glowing-skin-1-ozone-original-imah3xug3nkkzgnc.jpeg",
-      "xif0q/facial-kit/9/z/b/60-illuminous-gold-facial-kit-for-glowing-skin-1-ozone-original-imah3xuggrgcs2hk.jpeg",
-      "xif0q/facial-kit/y/6/b/60-illuminous-gold-facial-kit-for-glowing-skin-1-ozone-original-imah3xugkrwbwsqg.jpeg",
-      "xif0q/facial-kit/0/x/u/60-illuminous-gold-facial-kit-for-glowing-skin-1-ozone-original-imah3xugnzzwe2nb.jpeg",
-    ],
-  },
-  {
-    id: 2,
     category: "furniture",
     title:
       "FUTURE GENERATION A GROUP Engineered Wood Side Table  (Finish Color - WENGE, DIY(Do-It-Yourself))",

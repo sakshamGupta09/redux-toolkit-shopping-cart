@@ -23,8 +23,8 @@ export default function Product({ product }: Props) {
             alt={product.description}
             src={images.lg}
             loading="lazy"
-            width="auto"
-            height="auto"
+            width="100%"
+            height="100%"
           />
         </picture>
       </div>

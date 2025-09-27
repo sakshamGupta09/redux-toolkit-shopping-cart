@@ -21,7 +21,7 @@ export default function Products() {
 
   return (
     <section className={styles.products}>
-      <h2 className="page-title">Best Selling Products</h2>
+      <h2 className="page-title">Trending Products</h2>
       <div className={styles.products__list}>{productItems}</div>
     </section>
   );
