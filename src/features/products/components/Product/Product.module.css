@@ -13,3 +13,11 @@
     display: block;
   }
 }
+
+@media (width < 800px) {
+  .product {
+    .product__imgContainer {
+      height: 18rem;
+    }
+  }
+}

@@ -13,7 +13,7 @@ export default function ProductCategory({ category, loading }: Props) {
     <li className={styles.category}>
       <Link to={`products/${category.id}`}>
         <div className={styles.category__imgContainer}>
-          <Skeleton width="100%" height="144px" loading={loading}>
+          <Skeleton width="100%" height="128px" loading={loading}>
             <img
               className={styles.category__img}
               src={category.img}

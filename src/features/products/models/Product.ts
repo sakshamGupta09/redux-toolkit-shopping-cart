@@ -17,4 +17,5 @@ export interface IProduct {
   ratingDetails: IProductRating;
   images: string[];
   category: string;
+  brand: string;
 }
