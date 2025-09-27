@@ -1,6 +1,7 @@
 import { IMAGE_PREFIX } from "@constants/image-prefix";
 
 const IMAGE_CONFIG = {
+  XL: { size: "832/832", q: "80" },
   LG: { size: "612/612", q: "70" },
   SM: { size: "320/320", q: "90" },
   "1X": { size: "160/160", q: "80" },
